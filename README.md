@@ -7,6 +7,9 @@ This is a simple book rating app created using ReactJS. It uses functional compo
 ## Usage
 
 #### `npm install`
+
 #### `npm run json:server`
+
+### Run on http://localhost:3000
 #### `npm start`
 
