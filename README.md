@@ -1,8 +1,8 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## Simple Book Rating App
 
-In the project directory, you can run:
+This is a simple book rating app created using ReactJS. It uses functional components with hooks and has CRD functionality.
 
 ### `npm start`
 
