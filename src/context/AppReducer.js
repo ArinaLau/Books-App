@@ -3,7 +3,8 @@ export const ACTIONS = {
     DELETE_BOOK: 'DELETE_BOOK',
     FETCH_SUCCESS: 'FETCH_SUCCESS',
     FETCH_ERROR: 'FETCH_ERROR',
-    ADD_ERROR: 'ADD_ERROR',
+    UPDATE_BOOK: 'UPDATE_BOOK',
+    SAVE_UPDATE: 'SAVE_UPDATE'
 }
 
 export default (state, action) => {
@@ -32,6 +33,17 @@ export default (state, action) => {
                 loading: false,
                 books: [],
                 error: "Something went wrong!"
+            }
+
+        case ACTIONS.SAVE_UPDATE: 
+            return {
+                ...state,
+                books: state.books.map(book => {
+                    if(book.id === action.payload.id){
+                        return{...state.book, title: action.payload.title, rating: action.payload.rating}
+                    }
+                    return book
+                })
             }
 
         default:

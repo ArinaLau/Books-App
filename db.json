@@ -16,9 +16,14 @@
       "rating": "3.9"
     },
     {
-      "id": "26aa3db0-35c1-41a1-9e20-2909b1d6e570",
-      "title": "Book1",
-      "rating": 5
+      "id": "c1b7c493-797e-42b2-8c81-255a03be07b4",
+      "title": "Book4",
+      "rating": "4.5"
+    },
+    {
+      "id": "7e3acd24-b64e-4ae2-8618-7ce9d1d60170",
+      "title": "Book6",
+      "rating": "3.75"
     }
   ]
 }

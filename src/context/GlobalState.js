@@ -5,7 +5,7 @@ import axios from 'axios';
 const initialState = {
     loading: true,
     error: "",
-    books: []
+    books: [],
 }
   
 const endpoint = "http://localhost:3001";
@@ -44,8 +44,36 @@ export const GlobalContextProvider = ({ children }) => {
         })
         .catch(error => {
             console.log(error)
+        })   
+    }
+
+    // const saveUpdate = (id, item) => {
+    //     dispatch({
+    //         type: ACTIONS.SAVE_UPDATE,
+    //         payload: {
+    //             id, 
+    //             title: item.title,
+    //             rating: item.rating
+    //         }
+    //     })
+    // }
+
+    const saveUpdate = (id, item) => {
+        axios
+        .put(endpoint + `/books/${id}`, item)
+        .then(() => {
+            dispatch({
+                type: ACTIONS.SAVE_UPDATE,
+                payload: {
+                    id, 
+                    title: item.title,
+                    rating: item.rating
+                }
+            })
         })
-        
+        .catch(error => {
+            console.log(error)
+        })
     }
 
     useEffect(() => {
@@ -70,7 +98,8 @@ export const GlobalContextProvider = ({ children }) => {
             error: state.error,
             books: state.books,
             addNewBook,
-            deleteBook
+            deleteBook,
+            saveUpdate,
         }}>
             {children}
         </GlobalContext.Provider>
