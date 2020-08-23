@@ -2,7 +2,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 # Simple Book Rating App
 
-This is a simple book rating app created using ReactJS. It uses functional components with hooks and has CRD functionality.
+This is a simple book rating app created using ReactJS. It uses functional components with hooks and has CRUD functionality.
 
 ## Usage
 
